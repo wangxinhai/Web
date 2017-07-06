@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>科技公司</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+		<script src="js/jquery-2.0.0.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			*{margin: 0;padding: 0;}
+			.navbar{width: 90%;margin: 0 auto;border: none;background: none;}
+			.navbar-brand{height: 70px;padding: 0;margin-top: -8px;}
+			#bs-example-navbar-collapse-1{float: right;  font-size: 16px;font-family:"微软雅黑";}
+			.navbar-header{width: 100%;margin-top: 12px;}
+			
+			#sh{width: 90%;height:400px;margin: 0 auto;}
+			.zt{width: 100%;height: 100px;padding: 1rem;text-align: center;}
+			.kj{width: 100%;height: 300px;}
+			#kk{height: 250px;text-align: center;}
+			.js{width: 120px; height: 120px;display: inline-block;background: antiquewhite;border-radius: 50%;text-align: center;}
+			#kk:hover .iconfont{background: #4E97D9;color: white;border-radius: 50%;}
+			.iconfont{width: 120px;height: 120px; font-size: 70px;text-align: center;line-height: 120px;}
+			.caption{height: 100px;text-align: center;}
+			.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+			    color: #555;
+			    background-color: white;
+		    }
+			
+			/*科技产品开始*/
+			#cp{text-align: center;}
+			#cp1{text-align: center;border-top: 1px white solid;}
+			.nav-ul{display: inline-block;}
+			.cp2{width: 100%;overflow: auto;overflow-x: hidden;}
+		    
+		    /*博科资讯*/
+		   #wm{width: 90%;height: 550px;margin: 0 auto;}
+		   
+		   /*底部开始*/
+		    .font{height: 320px;margin: 0 auto;}
+			#db{height: 180px;text-align: center;}
+			#db1{height: 180px;text-align: center;}
+			#db1 ul li{margin-top: 10px;}
+			#db1 ul a{text-decoration: none;}
+			.bq{height: 80px;margin: 50px auto;text-align: center;}
+			@font-face {
+				font-family:;
+				src: url(fonts/glyphicons-halflings-regular.svg);
+			}
+			/*导航条*/
+			@media screen and (min-width: 0px) and (max-width: 770px) {
+				#bs-example-navbar-collapse-1{
+					width: 100%;
+				}
+				.navbar-form{
+					text-align: center;
+				}
+			}
+			/*科技改变生活*/
+			@media screen and (min-width: 0px) and (max-width: 640px) {
+				.zt{height: 130px;}
+				.zt h3{font-size: 20px;}
+				.zt p{font-size: 12px;}
+				.js{width: 100px;height: 100px;}
+				#js1{font-size:50px;}
+				#kk{height: 280px;text-align: center;}	
+				.iconfont{text-align: center;width: 100px;height: 100px;border-radius: 50%;}	
+				.caption{width: 100%;text-align: center;font-size: 0.3rem;}
+				.caption h3{font-size: 20px;}
+			}
+			/*科技产品*/
+			@media screen and (min-width: 0px) and (max-width: 640px) {
+				#cp h1{font-size: 20px;}
+				#cp p{font-size: 12px;}
+				
+			}
+			
+			@media screen and (min-width: 0px) and (max-width: 640px) {
+				#cp1{width: 500px;}
+				#thum{height: 250px;}
+				#cap h4{font-size: 12px;}
+				#cap p{font-size: 12px;margin-top: -8px;}
+			}
+			
+			@media  screen and (min-width: 0px) and (max-width: 640px) {
+			  	#med{width: 100%;height: 100px;}
+			  	#med1 img{width: 100%;height: 100px;}
+			  	#med2{width: 50%;}
+			  	#med2 h4{font-size: 20px;}
+			  	#med2 p{font-size: 12px;overflow: hidden;}
+			  	#one{width: 100%;}
+			}
+			
+			@media  screen and (min-width: 100px) and (max-width: 640px) {
+			  	#wm{font-size: 12px;}
+			}
+		</style>
+	</head>
+	<body>
+		<!--导航条开始-->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+				    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					    <span class="sr-only">Toggle navigation</span>
+					    <span class="icon-bar"></span>
+					    <span class="icon-bar"></span>
+					    <span class="icon-bar"></span>
+				    </button>
+				    <a class="navbar-brand" href="#"><img src="img/logo.png.png"/></a>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<form class="navbar-form navbar-right" style="border: 0;">
+					        <div class="form-group">
+					          <button type="submit" class="btn btn-success">注册</button>
+					          <button type="submit" class="btn btn-default" style="border: 1px blue solid;">登录</button>
+					        </div>
+					    </form>
+					    <ul class="nav navbar-nav">
+					        <li class=""><a href="#" title="首页">首页 <span class="sr-only">(current)</span></a></li>
+					        <li class="dropdown">
+						        <a href="#" class="dropdown-toggle" title="产品" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品<span class="caret"></span></a>
+						        <ul class="dropdown-menu">
+						            <li><a href="#">智能手表</a></li>
+						            <li><a href="#">智能眼镜</a></li>
+						            <li><a href="#">机器人</a></li>
+						            <li><a href="#">体感车</a></li>
+						            <li><a href="#">无人机</a></li>
+						        </ul>
+					        </li>
+					        <li><a href="#" title="支持">支持</a></li>
+						    <li><a href="#" title="博客">博客</a></li>
+						    <li><a href="#" title="关于">关于</a></li>
+					    </ul>
+					</div>
+				</div>
+			</div>
+		</nav>   
+		
+		<!--轮播图开始-->
+		<div id="myCarousel" class="carousel slide" >
+			<!-- 轮播（Carousel）指标 -->
+			<ol class="carousel-indicators">
+			    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			    <li data-target="#myCarousel" data-slide-to="1"></li>
+			</ol>   
+			<!-- 轮播（Carousel）项目 -->
+			<div class="carousel-inner">
+			    <div class="item active data-ride="carousel" data-interval="2000">
+			        <img src="img/1464084575.png" alt="First slide" style="width: 100%;">
+			    </div>
+			    <div class="item">
+			        <img src="img/1464083856.png" alt="Second slide" style="width: 100%;">
+			    </div>
+			</div>
+			
+			<a class="carousel-control left" href="#myCarousel" data-slide="prev"><p style="margin-top: 280px;">&lsaquo;</p></a>
+			<a class="carousel-control right" href="#myCarousel" data-slide="next"><p style="margin-top: 280px;">&rsaquo;</p></a>
+		</div>
+	    <!--科技改变生活-->
+	    <div class="container" id="sh">
+	    	<div class="zt">
+	    		<h3>科技改变生活</h3>
+	    		<p style="font-size: 1.5rem;" id="js1">科技正用你无法想象的速度在改变世界，改变人们的生活</p>
+	    	</div>
+	    	<div class="kj">
+	    		<div class="row">
+				    <div class="col-lg-3 col-xs-6" id="kk">
+					    <div class="js">
+					    	<p class="iconfont icon-iconautomobile" id="js1"></p>
+					    </div>
+					    <div class="caption">
+						    <h3>无人驾驶</h3>
+						    <p>无人驾驶车将改变人们的出行方式。据估计，无人驾驶车可将每年因交通事故死亡的人数（120万）削减一半。</p>
+					    </div>
+				    </div>
+				    
+				    <div class="col-lg-3 col-xs-6" id="kk">
+					    <div class="js">
+					    	<p class="iconfont icon-eye" id="js1"></p>
+					    </div>
+					    <div class="caption">
+						    <h3>虚拟现实</h3>
+						    <p>简称VR，创建和体验虚拟世界，有一天你也会有专属自己的虚拟人生。</p>
+					    </div>
+				    </div>
+				    
+				    <div class="col-lg-3 col-xs-6" id="kk">
+					    <div class="js">
+					    	<p class="iconfont icon-android" id="js1"></p>
+					    </div>
+					    <div class="caption">
+						    <h3>机器人</h3>
+						    <p>未来将会有更多给人们生活带来改变的机器人，甚至机器人会有自己的情感。</p>
+					    </div>
+				    </div>
+				    
+				    <div class="col-lg-3 col-xs-6" id="kk">
+					    <div class="js">
+					    	<p class="iconfont icon-fighterjet" id="js1"></p>
+					    </div>
+					    <div class="caption">
+						    <h3>无人机</h3>
+						    <p>人们已经在利用无人机寻找等待救援的远足者和滑雪者，拍摄房屋航空图像，以及调查考古遗址。</p>
+					    </div>
+				    </div>
+				</div>
+	    	</div>  
+	    </div>
+	    <!--科技产品-->
+	    <div class="container">
+				<div class="container container-fluid" id="cp">
+					<h1>科技产品</h1>
+					<p>我们致力于让科技改善人们的生活</p>
+				</div>
+				<div class="cp2">
+				<div id="cp1">
+					<nav class="row">
+							<ul class="pagination">
+								<li>
+									<a href="#">全部</a>
+								</li>
+								<li>
+									<a href="#">智能手表</a>
+								</li>
+								<li>
+									<a href="#">机器人</a>
+								</li>
+								<li>
+									<a href="#">体感车</a>
+								</li>
+								<li>
+									<a href="#">无人机</a>
+								</li>
+						    </ul>
+						</div>
+					</nav>
+				</div>
+               
+				<div class="row">
+					<div class="col-lg-3 col-xs-6">
+						<div class="thumbnail" id="thum">
+							<img src="img/thumb (1).jpg" alt="...">
+							<div class="caption" id="cap">
+								<h4>Apple Watch Sport</h4>
+								<p style="color: red;">2288.00元</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<div class="thumbnail" id="thum">
+							<img src="img/2222.jpg" alt="...">
+							<div class="caption" id="cap">
+								<h4>Apple Watch Sport</h4>
+								<p style="color: red;">2288.00元</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<div class="thumbnail" id="thum">
+							<img src="img/thumb (2).jpg" alt="...">
+							<div class="caption" id="cap">
+								<h4>Apple Watch Sport</h4>
+								<p style="color: red;">2288.00元</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<div class="thumbnail" id="thum">
+							<img src="img/thumb (3).jpg" alt="...">
+							<div class="caption" id="cap">
+								<h4>Apple Watch Sport</h4>
+								<p style="color: red;">2288.00元</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3 col-xs-6">
+						<div class="thumbnail" id="thum">
+							<img src="img/thumb (2).jpg" alt="...">
+							<div class="caption" id="cap">
+								<h4>Apple Watch Sport</h4>
+								<p style="color: red;">2288.00元</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<div class="thumbnail" id="thum">
+							<img src="img/thumb (2).jpg" alt="...">
+							<div class="caption" id="cap">
+								<h4>Apple Watch Sport</h4>
+								<p style="color: red;">2288.00元</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<div class="thumbnail" id="thum">
+							<img src="img/thumb (2).jpg" alt="...">
+							<div class="caption" id="cap">
+								<h4>Apple Watch Sport</h4>
+								<p style="color: red;">2288.00元</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<div class="thumbnail" id="thum">
+							<img src="img/thumb (2).jpg" alt="...">
+							<div class="caption" id="cap">
+								<h4>Apple Watch Sport</h4>
+								<p style="color: red;">2288.00元</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		<!--博科资讯-->
+		<div class="container-fluid">
+			<div class="zt">
+	    		<h3>博科资讯</h3>
+	    		<p style="font-size: 1.5rem;">分享最新科技资讯，关注智能硬件</p>
+	    	</div>
+	    	<div class="row">
+	    	<div class="col-xs-12 col-lg-6" id="one">
+				<div class="media" id="med">
+					<div class="media-left media-middle" id="med1">
+						<a href="#"><img class="media-object" src="img/thumb.jpg" alt="..."></a>
+					</div>
+					<div class="media-body" id="med2">
+						<h4 class="media-heading"><a href="#">Oculus在伦敦组建VR团队</a></h4>
+						<p> Oculus在伦敦组建VR团队自从2014年斥资20亿美元收购Oculus以来， Facebook作为社交平台巨头一直在VR发展的前沿。而随着市场发展，VR在美国和中国等地刮起狂潮。 由此，Facebook准备扩大疆域，向英国瞄准。根...</p>
+					</div>
+				</div>
+			</div>
+            
+            	<div class="col-xs-12 col-lg-6" id="font_one">
+					<div class="media" id="med">
+						<div class="media-left media-middle" id="med1">
+							<a href="#"><img class="media-object" src="img/thumb.jpg" alt="..."></a>
+						</div>
+						<div class="media-body" id="med2">
+							<h4 class="media-heading"><a href="#">Oculus在伦敦组建VR团队</a></h4>
+							<p> Oculus在伦敦组建VR团队自从2014年斥资20亿美元收购Oculus以来， Facebook作为社交平台巨头一直在VR发展的前沿。而随着市场发展，VR在美国和中国等地刮起狂潮。 由此，Facebook准备扩大疆域，向英国瞄准。根...</p>
+						</div>
+					</div>
+			    </div>
+            
+				<div class="col-xs-12 col-lg-6" id="font_one">
+					<div class="media" id="med">
+						<div class="media-left media-middle" id="med1">
+							<a href="#"><img class="media-object" src="img/thumb.jpg" alt="..."></a>
+						</div>
+						<div class="media-body" id="med2">
+							<h4 class="media-heading"><a href="#">Oculus在伦敦组建VR团队</a></h4>
+							<p> Oculus在伦敦组建VR团队自从2014年斥资20亿美元收购Oculus以来， Facebook作为社交平台巨头一直在VR发展的前沿。而随着市场发展，VR在美国和中国等地刮起狂潮。 由此，Facebook准备扩大疆域，向英国瞄准。根...</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-lg-6" id="font_one">
+					<div class="media" id="med">
+						<div class="media-left media-middle" id="med1">
+							<a href="#"><img class="media-object" src="img/thumb.jpg" alt="..."></a>
+						</div>
+						<div class="media-body" id="med2">
+							<h4 class="media-heading"><a href="#">Oculus在伦敦组建VR团队</a></h4>
+							<p> Oculus在伦敦组建VR团队自从2014年斥资20亿美元收购Oculus以来， Facebook作为社交平台巨头一直在VR发展的前沿。而随着市场发展，VR在美国和中国等地刮起狂潮。 由此，Facebook准备扩大疆域，向英国瞄准。根...</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-lg-6" id="font_one">
+					<div class="media" id="med">
+						<div class="media-left media-middle" id="med1">
+							<a href="#"><img class="media-object" src="img/thumb.jpg" alt="..."></a>
+						</div>
+						<div class="media-body" id="med2">
+							<h4 class="media-heading"><a href="#">Oculus在伦敦组建VR团队</a></h4>
+							<p> Oculus在伦敦组建VR团队自从2014年斥资20亿美元收购Oculus以来， Facebook作为社交平台巨头一直在VR发展的前沿。而随着市场发展，VR在美国和中国等地刮起狂潮。 由此，Facebook准备扩大疆域，向英国瞄准。根...</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-lg-6" id="font_one">
+					<div class="media" id="med">
+						<div class="media-left media-middle" id="med1">
+							<a href="#"><img class="media-object" src="img/thumb.jpg" alt="..."></a>
+						</div>
+						<div class="media-body" id="med2">
+							<h4 class="media-heading"><a href="#">Oculus在伦敦组建VR团队</a></h4>
+							<p> Oculus在伦敦组建VR团队自从2014年斥资20亿美元收购Oculus以来， Facebook作为社交平台巨头一直在VR发展的前沿。而随着市场发展，VR在美国和中国等地刮起狂潮。 由此，Facebook准备扩大疆域，向英国瞄准。根...</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-lg-6" id="font_one">
+					<div class="media" id="med">
+						<div class="media-left media-middle" id="med1">
+							<a href="#"><img class="media-object" src="img/thumb.jpg" alt="..."></a>
+						</div>
+						<div class="media-body" id="med2">
+							<h4 class="media-heading"><a href="#">Oculus在伦敦组建VR团队</a></h4>
+							<p> Oculus在伦敦组建VR团队自从2014年斥资20亿美元收购Oculus以来， Facebook作为社交平台巨头一直在VR发展的前沿。而随着市场发展，VR在美国和中国等地刮起狂潮。 由此，Facebook准备扩大疆域，向英国瞄准。根...</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-lg-6" id="font_one">
+					<div class="media" id="med">
+						<div class="media-left media-middle" id="med1">
+							<a href="#"><img class="media-object" src="img/thumb.jpg" alt="..."></a>
+						</div>
+						<div class="media-body" id="med2">
+							<h4 class="media-heading"><a href="#">Oculus在伦敦组建VR团队</a></h4>
+							<p> Oculus在伦敦组建VR团队自从2014年斥资20亿美元收购Oculus以来， Facebook作为社交平台巨头一直在VR发展的前沿。而随着市场发展，VR在美国和中国等地刮起狂潮。 由此，Facebook准备扩大疆域，向英国瞄准。根...</p>
+						</div>
+					</div>
+				</div>
+			 </div>
+		</div>
+		   
+		<!--关于我们开始-->
+		<div class="container" id="wm">
+			<div class="zt">
+	    		<h3>关于我们</h3>
+	    		<p style="font-size: 1.5rem;">我们致力于让科技改善人们的生活</p>
+	    	</div>
+	    	
+	    	<div style="border-bottom: 1px gainsboro solid;">
+	    		<img src="img/1464245734139534.jpg" style="width: 100%;"/>
+	    	</div>
+	    	
+	    	<div style="width: 100%;height: 100px;" id="wm1">
+	    		<h4 style="margin-top: 20px;font-size: 14px;">某科技公司是一个诞生于2013年机器人浪潮来袭前际，总部位于“硬件之都”中国深圳。</h4>
+	    	    <h4 style="margin-top: 20px;font-size: 14px;">我们是一群热衷于智能机器人的极客、设计师和发烧友，对未来充满无限创想、野心和激情。“在最好的时光里，撒野去”是我们所倡导的品牌文化，号召属于这个时代的年轻人，不羁束缚、随心逐梦！</h4>
+	    	    <h4 style="margin-top: 20px;font-size: 14px;">比普通创客幸运一些的是，我们成立之初，就在语义技术、图数据管理和供应链方面拥有比较丰富的经验和积累，并且、汇聚整合了完善的生产链条和多元的渠道资源，我们愿意拥抱大胆有趣的产品理念，为用户创造更多的惊喜！</h4>
+	    	</div>
+		</div>
+		
+		<!--底部开始-->
+		<div class="font container-fluid">
+			<div class="row container" id="db">
+				<div id="db1" class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+					<h4><a href="#" style="text-decoration: none;">产品</a></h4>
+				    <ul style="list-style: none;">
+						<li><a href="#">智能手表</a></li>
+						<li><a href="#">智能眼镜</a></li>
+						<li><a href="#">机器人</a></li>
+						<li><a href="#">体感车</a></li>
+						<li><a href="#">无人机</a></li>
+				    </ul>
+				</div>
+			
+				<div id="db1" class="container-fluid col-lg-2 col-md-2 col-sm-6 col-xs-6">
+					<h4><a href="#" style="text-decoration: none;">支持</a></h4>
+					<ul style="list-style: none;">
+						<li><a href="#">售后政策</a></li>
+						<li><a href="#">相关下载</a></li>
+					</ul>
+				</div>
+				
+				<div id="db1" class="container-fluid col-lg-2 col-md-2 col-sm-6 col-xs-6">
+					<h4><a href="#" style="text-decoration: none;">博客</a></h4>
+					<ul style="list-style: none;">
+						<li><a href="#">产品资讯</a></li>
+						<li><a href="#">行业动态</a></li>
+						<li><a href="#">国际资讯</a></li>
+					</ul>
+				</div>
+				
+				<div id="db1" class="container-fluid col-lg-2 col-md-2 col-sm-6 col-xs-6">
+					<h4><a href="#" style="text-decoration: none;">关于</a></h4>
+					<ul style="list-style: none;">
+						<li><a href="#">关于我们</a></li>
+						<li><a href="#">联系我们</a></li>
+						<li><a href="#">加入我们</a></li>
+						<li><a href="#">意见反馈</a></li>
+					</ul>
+				</div>	
+				
+				<div id="db1" class="container-fluid col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				    <h4><a href="#" style="text-decoration: none;">400-000-000</a></h4>
+					<p>周一至周五 08:30~17:30</p>
+					<div class="container-fluid" style="margin-top: -30px;">
+					    <a href="#" class="iconfont icon-weixin" style="font-size: 30px;color: green;text-decoration: none;"></a>
+					    <a href="#" class="iconfont icon-QQ" style="font-size: 30px;color: blue;text-decoration: none;"></a>
+					    <a href="#" class="iconfont icon-xinlang" style="font-size: 30px;color: red;text-decoration: none;"></a>
+					</div>
+			    </div>
+		    </div>
+		    <div class="nav container-fluid bq">
+			    <p>科技公司 版权所有 © 2008-2016 湘ICP备8888888</p>
+	            <p>本页面内容为网站演示数据，前台页面内容都可以在后台修改。</p>
+	            <p>Powered by MetInfo 5.3.16</p>
+			</div>
+		</div>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+	<script>
+		$('.carousel').carousel({
+		    interval: 2000
+		})
+		
+		var myElement= document.getElementById('myCarousel')
+	        var hm=new Hammer(myElement);
+	    hm.on("swipeleft",function(){
+	        $('#myCarousel').carousel('next');
+	        });
+	    hm.on("swiperight",function(){
+	        $('#myCarousel').carousel('prev');
+	        });
+	</script>
+</html>
