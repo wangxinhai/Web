@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+		<style>
+		    /*底部开始*/
+		   #foot{
+		   	width: 100%;
+		   	background: #FEFFED;
+		   }
+		   .content{
+		   	display: flex;
+		   	justify-content: space-around;
+		   }
+		   .content a{
+		   	font-size: 3rem;
+		   	margin-left: -4rem;
+		    color: gray;
+		   }
+		   .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+		   	background: none;
+		   }
+		   #search { border: white; margin-top: -1rem;}
+		</style>
+	</head>
+	<body style="padding-bottom: 50px;">
+		<!--头部开始-->
+		<nav class="navbar navbar-default navbar-fixed-top" ng-show="vanish" style="background: #FFF8E6;">
+			<div class="container-fluid">
+				<div class="navbar-header">
+				    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					    <span class="sr-only">Toggle navigation</span>
+					    <span class="icon-bar"></span>
+					    <span class="icon-bar"></span>
+					    <span class="icon-bar"></span>
+				    </button>
+				    <a class="navbar-brand" href="#hg">订餐</a>
+					<div class="collapse navbar-collapse" style="width:100%;" id="bs-example-navbar-collapse-1">
+					    <ul class="nav navbar-nav" id="pull" style="width: 100%;position:absolute;margin-top:-0.2rem;background: #FFF8E6;border-top: 1px solid gainsboro;">
+					        <li><a href="#hg" title="首页">首页 <span class="sr-only">(current)</span></a></li>
+					        <!--<li class="dropdown">
+						        <a href="#" class="dropdown-toggle" title="菜单" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">菜单<span class="caret"></span></a>
+						        <ul class="dropdown-menu">
+						            <li><a href="#">酸甜开胃虾</a></li>
+						            <li><a href="#">皮蛋瘦肉粥</a></li>
+						            <li><a href="#">皮皮虾</a></li>
+						            <li><a href="#">小鸡炖蘑菇</a></li>
+						            <li><a href="#">鸡蛋汤</a></li>
+						        </ul>
+					        </li>-->
+					        <li><a href="#lianxiren" title="订餐">订餐</a></li>
+						    <li><a href="#" title="设置">设置</a></li>
+						    <li><a href="#" title="个人中心">个人中心</a></li>
+					    </ul>
+					</div>
+				</div>
+			</div>
+		</nav> 
+		<!--内容-->
+		<div class="page" ng-view></div>
+		<!--底部开始-->
+		<footer class="nav navbar-brand navbar-fixed-bottom" ng-show="vanish" id="foot">
+			<ul class="content">
+				<a href="#index" class="iconfont icon-shouye" style="text-decoration: none;"></a>
+				<a href="#lianxiren" class="iconfont icon-geren" style="text-decoration: none;"></a>
+				<a href="#order" class="iconfont icon-caidan" style="text-decoration: none;"></a>
+			</ul>
+		</footer>
+	</body>
+	<script src="js/jquery-2.1.0.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+	<script src="js/angular.js"></script>
+	<script src="js/angular-route.js"></script>
+	<script src="js/angular-touch.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".b").load('lianxiren.html');
+		});
+		
+		angular.module("app",["ng","ngRoute","ngTouch"]).config(function($routeProvider){
+			$routeProvider.when("/index",{
+				templateUrl:"index.html"
+			}).when("/lianxiren",{
+				templateUrl:"lianxiren.html"
+			}).when("/order",{
+				templateUrl:"order.html"
+			}).when("/caidan",{
+				templateUrl:"caidan.html"
+			}).when("/cover",{
+				templateUrl:"cover.html"
+			}).when("/hg",{
+				templateUrl:"index.html"
+			}).when("/order",{
+				templateUrl:"order.html"
+			}).otherwise({
+				redirectTo:'/cover'
+			})
+		}).controller("diancan",function($http,$scope){
+			$scope.hide=true;
+			$http({
+				method:"GET",
+				url:"data.json"
+			}).then(function(datas){
+				var a=datas.data;
+				var len=a.list.length;
+				$scope.lis=[];
+				for(var i=0;i<4;i++){
+					var obj={};
+					obj.srclg1=a.list[i].srclg;
+					obj.srclg=a.list[i].src;
+					obj.price=a.list[i].price;
+					obj.content=a.list[i].content;
+					obj.contmore=a.list[i].contmore;
+					obj.title=a.list[i].title;
+					$scope.lis.push(obj);
+				}
+				var b=4;
+				$scope.dainji=function(){
+					for(var i=0;i<2;i++){
+						var obj={};
+						obj.srclg1=a.list[i+b].srclg;
+						obj.srclg=a.list[i+b].src;
+						obj.price=a.list[i+b].price;
+						obj.content=a.list[i+b].content;
+						obj.contmore=a.list[i+b].contmore;
+						obj.title=a.list[i+b].title;
+						$scope.lis.push(obj);
+					}
+					b+=2;
+					if($scope.lis.length==len){
+						$scope.hide=false;
+					}
+                }
+				
+		    })
+	    }).controller("caidan",function($scope,$routeParams){
+	    	$scope.title=$routeParams.atitle;
+	    	$scope.srclg=$routeParams.srclg;
+	    	$scope.content=$routeParams.acontent;
+	    	$scope.contmore=$routeParams.acontmore;
+	    	$scope.price=$routeParams.aprice;
+	    }).controller("mc",function($scope,$location,$rootScope){
+			$scope.k=function(){
+				$location.path("/index");
+//				$scope.hide=false
+                $rootScope.vanish=true;
+			}
+		})
+	    
+//	    location.reload(function(){
+//	    	$rootScope.vanish=true;
+//	    })
+//	    $('.carousel').carousel({
+//		    interval: 2000
+//		})
+//		
+//		var myElement= document.getElementById('myCarousel')
+//	        var hm=new Hammer(myElement);
+//	    hm.on("swipeleft",function(){
+//	        $('#myCarousel').carousel('next');
+//	        });
+//	    hm.on("swiperight",function(){
+//	        $('#myCarousel').carousel('prev');
+//	    });
+	</script>
+</html>
