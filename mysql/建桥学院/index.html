@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+			#a1{
+				height:40px;
+				background: gainsboro;
+			}
+			.a2{
+				width: 1100px;
+				height: 40px;
+				margin: 0 auto;
+			}
+			.a2 ul{
+				width: 330px;
+				height: 12px;
+				float: left;
+				margin-top: 16px;
+			}
+			.a2 ul a{
+				width: 68px;
+				height: 12px;
+				border-right:1px white solid;
+				float: left;
+				display: block;
+				text-decoration: none;
+				color:black;
+				text-align: center;
+				line-height: 12px;
+				font-size: 14px;
+			}
+			#a4{
+				width: 84px;
+				border-right:none;
+			}
+			#a3{
+				width: 36px;
+			}
+			#a5{
+				width: 365px;
+				height: 20px;
+				float: right;
+				margin-top: 10px;
+			}
+			#a5 a{
+				width: 70px;
+				height: 20px;
+				display: block;
+				text-decoration: none;
+				color: black;
+				float: left;
+			}
+			#a6{
+				float: right;
+				width: 140px;
+				height: 25px;
+				font-size: 14px;
+			}
+			#b{
+				width: 1000px;
+				height: 100px;
+				margin: 0 auto;
+			}
+			#b1{
+				margin-top: 12px;
+				height: 70px;
+				line-height: 100px;
+				}
+			#b2{float: right;}
+			#c{
+				height: 50px;
+				background: darkred;
+			}
+			#c1{
+				width: 1010px;
+				height: 50px;
+				background: red;
+				margin: 0 auto;
+			}
+			#c1 li{	float: left;list-style: none;}
+			#c1 li a{
+				text-decoration: none;
+				color: white;
+				line-height: 50px;
+				width: 101px;
+				height: 50px;
+				display: block;
+				text-align: center;
+			}
+			#c1 li a:hover{
+				background: cyan;
+			}
+			#c2{
+				margin: 0 auto;
+				width: 1010px;
+				height: 325px;
+				display: block;				
+				}
+				#m{
+					margin: 0 auto;
+					width:1010px;
+					height:600px;
+				}
+			#d{
+				width: 750px;
+				height: 550px;
+				margin: 0 auto;
+				float: left;
+				
+				}
+				#d1{
+					width: 270px;
+					height: 195px;
+					margin-top: 40px;
+					float: left;
+				}
+				#d2{
+					height: 30px;
+					border-bottom: 2px darkgray solid;
+				}
+				#d3{
+					margin-top: 20px;
+				}
+				#d4{
+					text-align: center;
+				}
+				#e{
+					width: 440px;
+					height: 195px;
+					float: right;
+					margin-top: 40px;
+				}
+				#e1{
+				    height: 30px;
+					border-bottom: 2px darkgray solid;
+					
+				}
+				#e2{margin-top: 20px;float: left;}
+				#e3{
+					float: left;
+					width: 370px;
+					height: 80px;
+					margin-top: 20px;
+				}
+				#e4{
+					float: left;
+					width: 370px;
+					height: 80px;
+				}
+				#e5{float: left;}
+				#f{
+					width: 280px;
+					height: 225px;
+					float: left;
+					margin-top: 50px;
+				}
+				#f1{
+					width: 280px;
+					height: 40px;
+					border-bottom: 2px darkgray solid;
+				}
+				#f2{
+					margin-top: 20px;
+					white-space: nowrap;
+				}
+				#g{
+					width: 440px;
+					height: 195px;
+					float: left;
+					margin-top: 50px;
+					margin-left: 30px;
+				}
+				#g1{
+					width: 440px;
+					height:40px;
+				    border-bottom: 2px darkgray solid;
+				}
+				#g2{
+					margin-top: 20px;
+				}
+				#h{
+					width: 250px;
+					height: 500px;
+					float: left;
+					display: block;
+					margin-left: 5px;
+					margin-top: 40px;
+				}
+				.h2{
+					width: 190px;
+					height: 120px;
+					margin-top: 30px;
+					float: left;
+				}
+				#h3:hover{background: red;}
+				#h3{
+					width: 210px;
+					height: 30px;
+					border-bottom: 2px darkgray solid;
+					text-decoration: none;
+					
+				}
+				#h4{margin-top: 20px;float: left;}
+				#h5{
+					width: 40px;
+					height: 20px;
+					float: left;
+					margin-top: 10px;
+				}
+				#h6{
+					float: left;
+					margin-left: 50px;
+					margin-top: 10px;
+				}
+				#h7{
+					float: left;
+					margin-top: 10px;
+				}
+				#j{
+					width: 100%;
+				}
+				#k{
+				    height: 40px;
+				    background: darkgrey;
+				}
+				.k1{
+					width: 850px;
+					height: 40px;
+					margin: 0 auto;
+				}
+				.k1 a{
+					text-decoration: none;
+					width: 170px;
+					height: 40px;
+					line-height: 40px;
+					display: block;
+					float: left;
+					text-align: center;
+				}
+				.k1 a:hover{
+					background: yellow;
+				}
+				#q{
+					height: 40px;
+				    background: black;
+				    border: 1px black solid;
+				}
+				.q1{
+					width: 800px;
+					height: 12px;
+					margin: 14px auto;
+				}
+				.q1 a{
+					text-decoration: none;
+					width: 130px;
+					height: 12px;
+					line-height: 12px;
+					display: block;
+					color: white;
+					float: left;
+					text-align: center;
+					font-size: 12px;
+					border-right:1px red solid ;
+				}
+				#q2{border-right:none ;}
+				#q3{
+					width: 71px;
+					height: 12px;
+				}
+				#ty{
+					height: 80px;
+					background: darkslategray;
+				}
+				.ty1{
+					width: 1000px;
+					height: 80px;
+					margin: 0 auto;
+				}
+				.ty1 p{
+					text-align: center;
+					line-height: 40px;
+					color: white;
+				}
+		</style>
+	</head>
+	<body>
+		<div id="a1">
+			<div class="a2">
+				<ul>
+				    <a href="#">在校学生</a>
+				    <a href="#">教职员工</a>
+				    <a href="#" id="a3">校友</a>
+				    <a href="#">未来学生</a>
+				    <a href="#" id="a4">未来教职工</a>
+			   </ul>
+			    <div id="a5">
+			    	<img src="img/QQ截图20170410161111.png"/ id="a6">
+				    <a href="#">繁体中文</a>
+				    <a href="#">怀念旧版</a>
+			   	    <a href="#">English</a>
+			    </div>
+			</div>
+		</div>
+		<div id="b">
+			<img src="img/QQ截图20170410161146.png"/ id="b1">
+			<img src="img/QQ截图20170410161218.png"/ id="b2">
+		</div>
+		<div id="c">
+			<ul id="c1">
+			   <li><a href="#" id="c3">建桥概念</a></li>
+			   <li><a href="#">机构设置</a></li>
+			   <li><a href="#">人才培养</a></li>
+			   <li><a href="#">学术科研</a></li>
+			   <li><a href="#">校园文化</a></li>
+			   <li><a href="#">合作交流</a></li>
+			   <li><a href="#">招生就业</a></li>
+		       <li><a href="#">校友会</a></li>
+			   <li><a href="#">荣誉榜</a></li>
+			   <li><a href="#">信息公开</a></li>
+		    </ul>
+		    
+		</div>
+		<img src="img/QQ截图20170410185859.png"/ id="c2">
+		<div id="m">
+		<div id="d">
+			<div id="d1">
+				<h3 id="d2">图片</h3>
+				<img src="img/QQ截图20170410161306.png"/ id="d3">
+				<p id="d4">商学院第三届建筑模型制作大赛决...</p>
+			</div>
+			<div id="e">
+					<h3 id="e1">院部动态</h3>
+					<img src="img/QQ截图20170410161320.png"/ id="e2">
+					<div id="e3">
+					    <h4>我校举行开学典礼新校区落成启用仪...</h4>
+					    <p>苏35作为中国空军的圣诞礼物,苏35作为中国空军的圣诞礼物,一路的行程都被军迷所掌握...</p>
+					</div>
+					
+					<img src="img/QQ截图20170410161320.png"/ id="e5">
+					<div id="e4">
+						<h4>我校举行开学典礼新校区落成启用仪...</h4>
+					    <p>苏35作为中国空军的圣诞礼物，其来华的过程备受瞩目，一路的行程都被军迷所掌握...</p>
+					</div>
+			</div>
+			<div id="f">
+				<h3 id="f1">讲座报告</h3>
+				<div id="f2">
+					<p>苏35中国空军的圣诞礼物&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-11</p>
+					<p>苏35中国空军的圣诞礼物&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-11</p>
+					<p>苏35中国空军的圣诞礼物&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-11</p>
+					<p>苏35中国空军的圣诞礼物&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-11</p>
+					<p>苏35中国空军的圣诞礼物&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-11</p>
+					<p>苏35中国空军的圣诞礼物&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-11</p>
+				</div>
+			</div>
+			<div id="g">
+				<h3 id="g1">通知公告</h3>
+				<div id="g2">
+					<p>关于2015年新设班级通知&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-11</p>
+					<p>关于2015年新设班级通知&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-11</p>
+					<p>关于2015年新设班级通知&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-11</p>
+					<p>关于2015年新设班级通知&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-11</p>
+					<p>关于2015年新设班级通知&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04-11</p>
+				</div>
+			</div>
+		</div>
+		<div id="h">
+				<img src="img/QQ截图20170410161340.png"/ id="h1">
+				<div class="h2">
+					<a href="#" id="h3">信息门户<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;建桥邮箱--></a>
+					<a href="#" id="h3">建桥邮箱</a>
+					<input type="text"/ placeholder="用户名" id="h4">
+					<input type="password"/ placeholder="密码" id="h7">
+					<input type="text" /placeholder="登录" id="h5">
+					<p id="h6">忘记密码？</p>
+				</div>
+		</div>
+		</div>
+		<img src="img/QQ截图20170410161427.png"/ id="j">
+		<div id="k">
+			<div class="k1">
+				<a href="#">友情链接</a>
+			    <a href="#">合作院校</a>
+			    <a href="#">产学合作单位</a>
+			    <a href="#">相关链接</a>
+			    <a href="#">实用链接</a>
+			</div>
+		</div>
+		<div id="q">
+			<div class="q1">
+				<a href="#" id="q3">教育部</a>
+			    <a href="#">上海市教育委员会</a>
+			    <a href="#">上海建桥(集团)有限公司</a>
+			    <a href="#">西南片高效联合办学</a>
+			    <a href="#">应用技术大学(学院)联盟</a>
+			    <a href="#" id="q2">非营利性高效联盟</a>
+			</div>
+		</div>
+		<div id="ty">
+			<div class="ty1">
+				<p>学校地址：上海市浦东新区湖田路1111号&nbsp;&nbsp;邮编：201306</p>
+				<p>电话：021-58137788(总机)：58137880(招生办公室)沪ICP05052066号</p>
+			</div>
+		</div>
+	</body>
+</html>
