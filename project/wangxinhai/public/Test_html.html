@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style>
+        #theBtn{
+            width: 100%;
+            height: 200px;
+        }
+    input {
+        font-size:50px;
+        width: 300px;
+        height: 200px;
+        /*margin: 100px 300px 200px 500px;*/
+    }
+        #theShow{
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+            height: 600px;
+            border: 1px solid black;
+        }
+    </style>
+    <script src="./javascripts/jquery.js"></script>
+    <title></title>
+</head>
+<body>
+<div id="theBtn">
+    <input type="button" value="GET" id="theGet"/>
+    <input type="button" value="POST" id="thePost"/>
+</div>
+
+<div id="theShow"></div>
+<script>
+    $(function () {
+        $("#theGet").click(function () {
+            $.ajax({
+//              url: '/VueHandler/hello?action=fcxy',          
+//              url:"/VueHandler/AdminLoginAndRegHandler?action=verification",     获取验证码接口
+//              url:"/VueHandler/AdminHandler?action=quit",      退出接口
+//              url:"/VueHandler/AdminHandler?action=show",    //查询数据库接口
+//              url:"/VueHandler/AdminHandler?action=delete",  //删除接口
+//              url:"/VueHandler/AdminHandler?action=deletes",
+                url:"/VueHandler/VideoHandler?action=delete", // 删除接口
+                type:"GET",
+                async:false,
+                data:{
+//                  pageStart:2,
+//                  searchText:"哇"
+                    ID:2
+                },
+                success: function (data) {
+                    $("#theShow").html(data);
+                    var msg = eval('(' + data + ')');
+                    if(msg.success)
+                    {
+                        alert(1);
+      
+                    }
+                }
+            })
+        });
+        $("#thePost").click(function () {
+            $.ajax({
+//              url: '/VueHandler/AdminLoginAndRegHandler?action=login',  登录接口
+//              url: '/VueHandler/AdminLoginAndRegHandler?action=add',    //添加接口
+//              url:"/VueHandler/AdminHandler?action=update",           //修改接口
+//              url:"/VueHandler/AdminHandler?action=xxs",                  //小学生列表接口
+//              url:"/VueHandler/AdminHandler?action=adduser",          //大学生列表
+                url:" /VueHandler/VideoHandler?action=add",            //  视频添加
+//              url:" /VueHandler/VideoHandler?action=update",
+//              url:" /VueHandler/VideoHandler?action=showlist",
+                type:"POST",
+                async:false,
+                data:{
+	                //注册用户的数据
+//	                 userName:"kk",
+//	                 password:"123456",
+//	                 turename:"lalala",
+//	                 phone:"18864659730",
+//	                 power:"系统管理人员" 
+                    
+                    //修改的数据！！！
+//                  tokenId:"1",
+//                  userName:"admin120",
+//                  turename:"金刚芭比",
+//                  phone:"18864659730",
+//                  power:"课程管理员"
+                    
+                    //小学生列表
+//                  userName:"金刚芭比",
+//                  dsc:"我有兄弟千千万！"
+                    
+                    //大学生列表
+//                  userName:"小熊5",
+//                  phone:"18864659730",
+//                  email:"1789169008@qq.com"
+                    
+                    //  视频添加
+                    Vname:"葫芦娃救爷爷",
+                    Vtime:100,
+                    Vurl:"temporay\\video\\1.jpg",
+                    ID:1
+                     
+                    // 查询显示接口
+//                  pageStart:2,
+//                  searchText:""  // 按照关键字搜索
+                },
+                success: function (data) {
+                    $("#theShow").html(data);
+                    var msg = eval('(' + data + ')');
+                    if(msg.success)
+                    {
+                        alert(1);
+                       
+                    }
+                }
+            })
+
+        });
+    });
+    
+    
+//  $.ajax({
+//      url: '',
+//      type:"POST",
+//      async:false,
+//      data:{
+//
+//
+//      },
+//      success: function (data) {
+//          $("#theShow").html(data);
+////            var msg = eval('(' + data + ')');
+////            if(msg.success)
+////            {
+////                alert(1);
+//
+////            }
+//      }
+//  });
+
+
+
+
+
+</script>
+</body>
+</html>
